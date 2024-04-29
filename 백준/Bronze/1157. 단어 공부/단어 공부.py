@@ -1,9 +1,10 @@
 word = input().lower()
-dict = {}
-for w in list(set(word)):
-    dict[w] = word.lower().count(w)
-
-if list(dict.values()).count(max(dict.values())) > 1:
+unique = list(set(word))
+cnt = []
+for i in unique:
+    count = word.count(i)
+    cnt.append(count)
+if cnt.count(max(cnt)) > 1:
     print('?')
 else:
-    print(max(dict, key=dict.get).upper())
+    print(unique[cnt.index(max(cnt))].upper())
