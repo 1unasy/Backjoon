@@ -1,2 +1,2 @@
-sentence = input()
-print(len(sentence.split()))
+sentence = list(input().split())
+print(len(sentence))
